@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Dashboard Média", layout = "wide")
+st.set_page_config(page_title="Média Escolar Espaço Aberto", layout = "wide")
 
 # Diminui os espaços vazios da página
 st.markdown("""
