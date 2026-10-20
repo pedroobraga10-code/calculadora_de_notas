@@ -30,10 +30,10 @@ col1, col2 = st.columns([2, 1], gap = "small")
 with col1:
  adem = st.slider("Nota ADEM", 0.0, 10.0, 7.0, 0.1)
  app = st.slider("Nota APP",0.0, 10.0, 7.0, 0.1)
- af = st.slider("Nota AF", 0.0, 10.0, 7.0, 0.1)
- meaif = st.slider("Nota MEAIF", 0.0, 10.0, 7.0, 0.1)
+ af = st.slider("Nota AF (Trabalho Bimestral) ", 0.0, 10.0, 7.0, 0.1)
+ meaif = st.slider("Nota MEAIF (Trilha)", 0.0, 10.0, 7.0, 0.1)
  ps = st.slider("Nota PS", 0.0, 10.0, 7.0, 0.1)
- olv = st.slider("Nota OLV", 0, 2, 0)
+ olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0, 2, 0)
 
 media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
 
