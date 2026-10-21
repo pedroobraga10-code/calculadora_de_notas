@@ -33,7 +33,7 @@ with col1:
  af = st.slider("Nota AF (Trabalho Bimestral) ", 0.0, 10.0, 7.0, 0.1)
  meaif = st.slider("Nota MEAIF (Trilha)", 0.0, 10.0, 7.0, 0.1)
  ps = st.slider("Nota PS", 0.0, 10.0, 7.0, 0.1)
- olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0, 2, 0)
+ olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0.0, 2.0, 0.0, 0.5)
 
 media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
 
