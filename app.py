@@ -13,7 +13,7 @@ st.markdown("""
         /* 1rem = tamanho da fonte raiz (geralmente 16px) */
         
         /* Controla o espaçamento superior da página */
-        padding-top: 3.5rem;
+        padding-top: 3.4rem;
         
         /* Controla o espaçamento inferior da página */
         padding-bottom: 0rem;
