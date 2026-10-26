@@ -56,6 +56,13 @@ with col1:
 
     olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0.0, 2.0, 0.0, 0.5)
 
+        # Exibe assinatura em HTML
+    st.markdown(
+        #Alinhamento do texto,       tamanho da fonte,    estilo itálico,       assinatura
+        "<p style='text-align: right; font-size: 10px; font-style: italic;'>Pedro de Oliveira Braga</p>",
+        unsafe_allow_html=True
+    )
+
 media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
 
 with col2:
