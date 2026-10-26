@@ -77,7 +77,7 @@ with col2:
         #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,           frase sobre a nota
-            "<h3 style='text-align: center;'>Sua nota está na média</h3>",
+            "<h3 style='text-align: center;'>Está na média</h3>",
             unsafe_allow_html=True
         )
 
