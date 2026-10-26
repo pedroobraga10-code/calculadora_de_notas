@@ -4,43 +4,83 @@ st.set_page_config(page_title="Média Escolar Espaço Aberto", layout = "wide")
 
 # Diminui os espaços vazios da página
 st.markdown("""
+<!-- Controle da aparência da página -->
 <style>
+    
+     /* Seleciona o contêiner principal do conteúdo da página */
     .block-container {
+
+        /* 1rem = tamanho da fonte raiz (geralmente 16px) */
+        
+        /* Controla o espaçamento superior da página */
         padding-top: 4rem;
+        
+        /* Controla o espaçamento inferior da página */
         padding-bottom: 0.5rem;
     }
 
+    /* Seleciona os contêineres verticais do Streamlit */
     div[data-testid="stVerticalBlock"] {
+        /* Controla o espaçamento entre os elementos dentro de cada contêiner vertical */
         gap: 0.4rem;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# Logo e título na mesma linha
-logo, titulo = st.columns([1, 8], vertical_alignment="center")
+# Logo e título na mesma linha com título centralizado
+logo, titulo, espaco = st.columns([1, 8, 1], vertical_alignment="center")
 
 with logo:
     st.image("logo_colegio.png", width=90)
 
 with titulo:
-    st.title("Cálculo de Notas")
+    st.markdown(
+        #Alinhamento do texto,          título
+        "<h1 style='text-align: center;'>Cálculo de Notas</h1>",
+        unsafe_allow_html=True
+    )
 
 col1, col2 = st.columns([2, 1], gap = "small")
 
 with col1:
  adem = st.slider("Nota ADEM", 0.0, 10.0, 7.0, 0.1)
+
  app = st.slider("Nota APP",0.0, 10.0, 7.0, 0.1)
+
  af = st.slider("Nota AF (Trabalho Bimestral) ", 0.0, 10.0, 7.0, 0.1)
+
  meaif = st.slider("Nota MEAIF (Trilha)", 0.0, 10.0, 7.0, 0.1)
+
  ps = st.slider("Nota PS", 0.0, 10.0, 7.0, 0.1)
+
  olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0.0, 2.0, 0.0, 0.5)
 
 media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
 
 with col2:
- if media > 10:
-   st.subheader(f"Sua média é maior que 10, é {media:.2f}")
- elif 10 >= media >= 7:
-   st.subheader(f"Sua média é {media:.2f}, sua nota está na média")
- else:
-   st.subheader(f"Sua média é {media:.2f}, sua nota está abaixo da média")
+
+    if media >= 7:
+        st.markdown(
+            #Alinhamento do texto,   cor da nota,   tamanho da fonte,  nota
+            f"<h1 style='text-align: center; color: #00C853; font-size: 60px;'>{media:.2f}</h1>",
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            #Alinhamento do texto,           frase sobre a nota
+            "<h3 style='text-align: center;'>Sua nota está na média</h3>",
+            unsafe_allow_html=True
+        )
+
+    else:
+        st.markdown(
+            #Alinhamento do texto,           cor da nota,   tamanho da fonte,  nota
+            f"<h1 style='text-align: center; color: #FF1744; font-size: 60px;'>{media:.2f}</h1>",
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            #Alinhamento do texto,           frase sobre a nota
+            "<h3 style='text-align: center;'>Sua nota está abaixo da média</h3>",
+            unsafe_allow_html=True
+        )
