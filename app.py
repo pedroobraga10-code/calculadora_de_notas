@@ -61,7 +61,7 @@ media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
 with col2:
 
     # Espaço superior para alinhamento
-    st.markdown("<div style='padding-top: 40px;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='padding-top: 80px;'></div>", unsafe_allow_html=True)
 
     #Exibe conteúdo formatado em Markdown ou HTML
     st.markdown(
