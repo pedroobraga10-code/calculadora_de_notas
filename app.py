@@ -73,7 +73,7 @@ with col2:
     #Exibe conteúdo formatado em Markdown ou HTML
     st.markdown(
         #Alinhamento do texto,      tamanho da fonte,    título
-        "<h1 style='text-align: center; font-size: 40px;'>Nota:</h1>",
+        "<h1 style='text-align: center; font-size: 40px;'>Nota</h1>",
         unsafe_allow_html=True
     )
 
