@@ -13,10 +13,10 @@ st.markdown("""
         /* 1rem = tamanho da fonte raiz (geralmente 16px) */
         
         /* Controla o espaçamento superior da página */
-        padding-top: 4rem;
+        padding-top: 3rem;
         
         /* Controla o espaçamento inferior da página */
-        padding-bottom: 0.5rem;
+        padding-bottom: 0rem;
     }
 
     /* Seleciona os contêineres verticais do Streamlit */
@@ -59,7 +59,7 @@ with col1:
         # Exibe assinatura em HTML
     st.markdown(
         #Alinhamento do texto,       tamanho da fonte,    estilo itálico,       assinatura
-        "<p style='text-align: right; font-size: 10px; font-style: italic;'>Pedro de Oliveira Braga</p>",
+        "<p style='text-align: left; font-size: 10px; font-style: italic;'>Pedro de Oliveira Braga</p>",
         unsafe_allow_html=True
     )
 
