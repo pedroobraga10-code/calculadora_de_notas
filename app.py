@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Média Escolar Espaço Aberto", layout = "wide")
 
-# Diminui os espaços vazios da página
+#Aplica estilos CSS à página utilizando HTML
 st.markdown("""
 <!-- Controle da aparência da página -->
 <style>
@@ -34,6 +34,7 @@ with logo:
     st.image("logo_colegio.png", width=90)
 
 with titulo:
+    #Exibe conteúdo formatado em Markdown ou HTML
     st.markdown(
         #Alinhamento do texto,          título
         "<h1 style='text-align: center;'>Cálculo de Notas</h1>",
@@ -43,29 +44,37 @@ with titulo:
 col1, col2 = st.columns([2, 1], gap = "small")
 
 with col1:
- adem = st.slider("Nota ADEM", 0.0, 10.0, 7.0, 0.1)
+    adem = st.slider("Nota ADEM", 0.0, 10.0, 7.0, 0.1)
 
- app = st.slider("Nota APP",0.0, 10.0, 7.0, 0.1)
+    app = st.slider("Nota APP",0.0, 10.0, 7.0, 0.1)
 
- af = st.slider("Nota AF (Trabalho Bimestral) ", 0.0, 10.0, 7.0, 0.1)
+    af = st.slider("Nota AF (Trabalho Bimestral) ", 0.0, 10.0, 7.0, 0.1)
 
- meaif = st.slider("Nota MEAIF (Trilha)", 0.0, 10.0, 7.0, 0.1)
+    meaif = st.slider("Nota MEAIF (Trilha)", 0.0, 10.0, 7.0, 0.1)
 
- ps = st.slider("Nota PS", 0.0, 10.0, 7.0, 0.1)
+    ps = st.slider("Nota PS", 0.0, 10.0, 7.0, 0.1)
 
- olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0.0, 2.0, 0.0, 0.5)
+    olv = st.slider("Nota OLV (Olimpíadas e Vestibulares)", 0.0, 2.0, 0.0, 0.5)
 
 media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
 
 with col2:
+    #Exibe conteúdo formatado em Markdown ou HTML
+    st.markdown(
+        #Alinhamento do texto,      tamanho da fonte,    título
+        "<h1 style='text-align: center; font-size: 40px;'>Nota:</h1>",
+        unsafe_allow_html=True
+    )
 
     if media >= 7:
+        #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,   cor da nota,   tamanho da fonte,  nota
             f"<h1 style='text-align: center; color: #00C853; font-size: 60px;'>{media:.2f}</h1>",
             unsafe_allow_html=True
         )
 
+        #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,           frase sobre a nota
             "<h3 style='text-align: center;'>Sua nota está na média</h3>",
@@ -73,12 +82,14 @@ with col2:
         )
 
     else:
+        #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,           cor da nota,   tamanho da fonte,  nota
             f"<h1 style='text-align: center; color: #FF1744; font-size: 60px;'>{media:.2f}</h1>",
             unsafe_allow_html=True
         )
 
+        #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,           frase sobre a nota
             "<h3 style='text-align: center;'>Sua nota está abaixo da média</h3>",
