@@ -88,7 +88,7 @@ with col2:
         #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,           frase sobre a nota
-            "<h3 style='text-align: center;'>Nota na média</h3>",
+            "<h3 style='text-align: center;'>Média alcançada</h3>",
             unsafe_allow_html=True
         )
 
@@ -103,6 +103,6 @@ with col2:
         #Exibe conteúdo formatado em Markdown ou HTML
         st.markdown(
             #Alinhamento do texto,           frase sobre a nota
-            "<h3 style='text-align: center;'>Nota abaixo da média</h3>",
+            "<h3 style='text-align: center;'>Média não obtida</h3>",
             unsafe_allow_html=True
         )
