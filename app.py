@@ -58,8 +58,8 @@ with col1:
 
         # Exibe assinatura em HTML
     st.markdown(
-        #Alinhamento do texto,       tamanho da fonte,    estilo itálico,       assinatura
-        "<p style='text-align: left; font-size: 10px; font-style: italic;'>Pedro de Oliveira Braga</p>",
+        #Alinhamento do texto,      tamanho da fonte,    estilo itálico,     margem inferior,     assinatura
+        "<p style='text-align: left; font-size: 10px; font-style: italic; margin-bottom: 0;'>Pedro de Oliveira Braga</p>",
         unsafe_allow_html=True
     )
 
