@@ -63,7 +63,7 @@ with col1:
         unsafe_allow_html=True
     )
 
-media = (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv
+media = min(10, (((4*adem) + (2*app) + (2*af) + meaif + ps)/10) + olv)
 
 with col2:
 
